@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physiotherapie Saarlouis Mitte GmbH — Bibelstraße 2, Saarlouis</title>
+<meta name="description" content="Physio- und Ergotherapie in Saarlouis Mitte. Krankengymnastik, manuelle Therapie, Lymphdrainage, PNF, Massage und physikalische Therapie. Bibelstraße 2, 66740 Saarlouis. Telefon 06831 4880180.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #FDFCFA;
+  --bg-2: #F6F2EA;
+  --bg-3: #EBE4D3;
+  --paper: #FFFFFF;
+
+  --ink: #1B1811;
+  --ink-soft: #4A4137;
+  --ink-mute: #7A6F5E;
+
+  --accent: #F26A4B;
+  --accent-2: #D14827;
+  --accent-soft: #FFCFC1;
+  --warm: #F8B24B;
+  --sun: #FFE066;
+
+  --line: rgba(31, 27, 20, 0.13);
+  --line-strong: rgba(31, 27, 20, 0.32);
+
+  --font-serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --edge: clamp(1.25rem, 3.5vw, 2.75rem);
+  --gutter: clamp(1rem, 2.5vw, 2rem);
+  --radius: 14px;
+  --radius-lg: 28px;
+  --radius-xl: 40px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --shadow-sm: 0 1px 2px rgba(31, 27, 20, 0.05), 0 4px 12px rgba(31, 27, 20, 0.04);
+  --shadow-md: 0 4px 16px rgba(31, 27, 20, 0.06), 0 12px 32px rgba(31, 27, 20, 0.05);
+  --shadow-lg: 0 8px 32px rgba(31, 27, 20, 0.08), 0 24px 64px rgba(31, 27, 20, 0.06);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.55;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+
+a { color: inherit; text-decoration: none; }
+
+::selection { background: var(--accent); color: var(--paper); }
+
+/* ══════════════ Typography ══════════════ */
+.h-display {
+  font-family: var(--font-serif);
+  font-variation-settings: 'opsz' 144, 'SOFT' 60, 'wght' 500;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+}
+.h-serif {
+  font-family: var(--font-serif);
+  font-variation-settings: 'opsz' 48, 'SOFT' 40, 'wght' 500;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+.ital {
+  font-style: italic;
+  font-variation-settings: 'opsz' 144, 'SOFT' 100, 'wght' 400;
+  color: var(--accent);
+}
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  line-height: 1;
+}
+.eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+.lede {
+  font-family: var(--font-serif);
+  font-variation-settings: 'opsz' 24, 'SOFT' 60, 'wght' 400;
+  font-size: clamp(1.05rem, 1.35vw, 1.35rem);
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 60ch;
+}
+
+/* ══════════════ Button ══════════════ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1rem 1.85rem;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.005em;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: transform 0.35s var(--ease-out), background 0.35s var(--ease-out), color 0.35s var(--ease-out), border-color 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out);
+  white-space: nowrap;
+}
+.btn__arrow {
+  display: inline-block;
+  transition: transform 0.35s var(--ease-out);
+}
+.btn:hover .btn__arrow { transform: translateX(3px); }
+.btn--primary {
+  background: var(--accent);
+  color: var(--paper);
+  box-shadow: 0 2px 8px rgba(242, 106, 75, 0.22);
+}
+.btn--primary:hover {
+  background: var(--accent-2);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(242, 106, 75, 0.32);
+}
+.btn--secondary {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line-strong);
+}
+.btn--secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent-2);
+  background: rgba(242, 106, 75, 0.06);
+}
+.btn--ghost {
+  background: transparent;
+  color: var(--ink);
+  padding: 0.5rem 0;
+  border-radius: 0;
+  border-bottom: 1.5px solid var(--ink);
+}
+.btn--ghost:hover {
+  color: var(--accent-2);
+  border-color: var(--accent);
+}
+
+/* ══════════════ Navbar ══════════════ */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(245, 239, 228, 0.86);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.nav__inner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.1rem var(--edge);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  line-height: 1;
+}
+.brand__name {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-variation-settings: 'opsz' 24, 'SOFT' 60, 'wght' 600;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+.brand__name .accent {
+  color: var(--accent-2);
+  font-style: italic;
+  font-variation-settings: 'opsz' 24, 'SOFT' 100, 'wght' 400;
+}
+.brand__place {
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+.nav__links {
+  display: flex;
+  gap: clamp(1.5rem, 2.4vw, 2.4rem);
+  justify-content: center;
+}
+.nav__link {
+  font-family: var(--font-sans);
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--ink);
+  position: relative;
+  padding: 0.35rem 0;
+  transition: color 0.3s var(--ease-out);
+}
+.nav__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1.5px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease-out);
+}
+.nav__link:hover { color: var(--accent-2); }
+.nav__link:hover::after { transform: scaleX(1); }
+.nav__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1.3rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  font-weight: 500;
+  letter-spacing: 0.005em;
+  transition: background 0.3s var(--ease-out);
+}
+.nav__cta::before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #7EE38A;
+  box-shadow: 0 0 0 3px rgba(126, 227, 138, 0.28);
+  animation: pulse 2s ease-in-out infinite;
+}
+.nav__cta:hover { background: var(--accent-2); }
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.25); opacity: 0.7; }
+}
+
+/* ══════════════ Hero ══════════════ */
+.hero {
+  padding: clamp(3rem, 7vh, 7rem) var(--edge) clamp(3rem, 6vh, 6rem);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+}
+.hero__eyebrow { margin-bottom: 1.75rem; }
+.hero__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-variation-settings: 'opsz' 144, 'SOFT' 50, 'wght' 500;
+  margin-bottom: 1.75rem;
+}
+.hero__heading .ital {
+  font-style: italic;
+  color: var(--accent-2);
+  font-variation-settings: 'opsz' 144, 'SOFT' 100, 'wght' 400;
+  display: block;
+  margin-top: 0.1em;
+}
+.hero__body {
+  font-family: var(--font-serif);
+  font-size: clamp(1.05rem, 1.35vw, 1.3rem);
+  line-height: 1.55;
+  color: var(--ink-soft);
+  font-variation-settings: 'opsz' 24, 'SOFT' 60, 'wght' 400;
+  max-width: 46ch;
+  margin-bottom: 2.5rem;
+}
+.hero__ctas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+.hero__info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.info-label {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+.info-value {
+  font-family: var(--font-serif);
+  font-size: 15.5px;
+  color: var(--ink);
+  font-variation-settings: 'opsz' 24, 'SOFT' 40, 'wght' 500;
+  line-height: 1.35;
+}
+
+.hero__image {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  box-shadow: var(--shadow-lg);
+}
+.hero__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero__image-tag {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  background: var(--paper);
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  box-shadow: var(--shadow-sm);
+}
+.hero__image-badge {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: var(--paper);
+  padding: 1.15rem 1.4rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  max-width: 220px;
+}
+.hero__image-badge-num {
+  font-family: var(--font-serif);
+  font-variation-settings: 'opsz' 144, 'SOFT' 100, 'wght' 500;
+  font-style: italic;
+  color: var(--accent-2);
+  font-size: 30px;
+  line-height: 1;
+}
+.hero__image-badge-txt {
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  line-height: 1.35;
+}
+
+/* ══════════════ Full-bleed image ══════════════ */
+.image-bleed {
+  width: 100%;
+  height: clamp(50vh, 75vh, 720px);
+  overflow: hidden;
+  position: relative;
+}
+.image-bleed img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image-bleed__caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--edge);
+  color: var(--paper);
+  background: linear-gradient(0deg, rgba(31,27,20,0.6), transparent 70%);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+}
+.image-bleed__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3.5vw, 3.2rem);
+  line-height: 1.1;
+  font-variation-settings: 'opsz' 144, 'SOFT' 80, 'wght' 400;
+  font-style: italic;
+  color: var(--paper);
+  max-width: 22ch;
+}
+.image-bleed__meta {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(251, 247, 238, 0.85);
+  text-align: right;
+}
+
+/* ══════════════ Section base ══════════════ */
+.section {
+  padding: clamp(4rem, 10vh, 8rem) var(--edge);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.section__head {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+  margin-bottom: clamp(2.5rem, 6vh, 5rem);
+  max-width: 60ch;
+}
+.section__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-variation-settings: 'opsz' 144, 'SOFT' 50, 'wght' 500;
+}
+
+/* ══════════════ Welcome ══════════════ */
+.welcome {
+  background: var(--paper);
+  border-radius: var(--radius-xl);
+  padding: clamp(3rem, 8vh, 6rem) clamp(2rem, 5vw, 5rem);
+  margin: 0 var(--edge) 0;
+  max-width: calc(1440px - var(--edge) * 2);
+  margin-inline: auto;
+  box-shadow: var(--shadow-sm);
+}
+.welcome__grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+}
+.welcome__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  color: var(--ink-soft);
+  font-size: 17px;
+  line-height: 1.7;
+}
+.welcome__body p:first-child::first-letter {
+  font-family: var(--font-serif);
+  font-size: 4rem;
+  float: left;
+  line-height: 0.85;
+  margin: 0.15em 0.15em 0 0;
+  color: var(--accent-2);
+  font-style: italic;
+  font-variation-settings: 'opsz' 144, 'SOFT' 100, 'wght' 500;
+}
+
+/* ══════════════ Highlights (Schwerpunkte) ══════════════ */
+.highlights {
+  background: linear-gradient(180deg, transparent, var(--bg-2));
+}
+.highlights__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+.highlight {
+  background: var(--paper);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
+  border: 1px solid var(--line);
+  min-height: 260px;
+}
+.highlight:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-soft);
+}
+.highlight__num {
+  font-family: var(--font-serif);
+  font-variation-settings: 'opsz' 144, 'SOFT' 100, 'wght' 400;
+  font-style: italic;
+  font-size: 42px;
+  color: var(--accent-2);
+  line-height: 1;
+}
+.highlight__title {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-variation-settings: 'opsz' 48, 'SOFT' 50, 'wght' 500;
+  line-height: 1.15;
+  color: var(--ink);
+}
+.highlight__body {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin-top: auto;
+}
+
+/* ══════════════ Services grid ══════════════ */
+.services {
+  background: var(--bg-2);
+}
+.services__wrap { max-width: 1440px; margin: 0 auto; padding: clamp(4rem, 10vh, 8rem) var(--edge); }
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.service {
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  border: 1px solid var(--line);
+  transition: all 0.35s var(--ease-out);
+  position: relative;
+}
+.service:hover {
+  border-color: var(--accent-soft);
+  background: #FCFAF3;
+  transform: translateY(-2px);
+}
+.service__num {
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--accent-2);
+}
+.service__title {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-variation-settings: 'opsz' 48, 'SOFT' 50, 'wght' 500;
+  line-height: 1.15;
+  letter-spacing: -0.005em;
+}
+.service__body {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+/* ══════════════ Prevention (image bg + quote) ══════════════ */
+.prevention {
+  position: relative;
+  min-height: 70vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(4rem, 10vh, 8rem) var(--edge);
+  color: var(--paper);
+}
+.prevention__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.prevention__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.prevention::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(135deg, rgba(27, 24, 17, 0.68), rgba(209, 72, 39, 0.52));
+}
+.prevention__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  text-align: center;
+}
+.prevention__eyebrow {
+  color: var(--paper);
+  margin-bottom: 2rem;
+}
+.prevention__eyebrow::before { background: var(--paper); }
+.prevention__quote {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 4vw, 3.4rem);
+  line-height: 1.2;
+  font-variation-settings: 'opsz' 144, 'SOFT' 80, 'wght' 400;
+  font-style: italic;
+  color: var(--paper);
+  letter-spacing: -0.015em;
+  margin-bottom: 2.5rem;
+}
+.prevention__sub {
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  color: rgba(251, 247, 238, 0.85);
+  line-height: 1.55;
+  max-width: 46ch;
+  margin: 0 auto;
+}
+
+/* ══════════════ Team ══════════════ */
+.team {
+  padding: clamp(4rem, 10vh, 8rem) var(--edge);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.team__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+}
+.team__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.team__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-variation-settings: 'opsz' 144, 'SOFT' 50, 'wght' 500;
+}
+.team__body {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  max-width: 52ch;
+}
+.team__attributes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.team__attr {
+  padding: 1.25rem 1.25rem;
+  background: var(--paper);
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+}
+.team__attr-value {
+  font-family: var(--font-serif);
+  font-variation-settings: 'opsz' 48, 'SOFT' 60, 'wght' 500;
+  font-size: 28px;
+  color: var(--accent-2);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.team__attr-label {
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.35;
+}
+.team__image {
+  aspect-ratio: 4/5;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+.team__image img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ══════════════ Location ══════════════ */
+.location {
+  background: var(--paper);
+  padding: clamp(4rem, 10vh, 8rem) var(--edge);
+}
+.location__wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+}
+.location__notice {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1.15rem;
+  background: rgba(248, 178, 75, 0.18);
+  border-radius: 999px;
+  border: 1px solid rgba(248, 178, 75, 0.42);
+  color: #B07A18;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-bottom: 2rem;
+}
+.location__notice::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--warm);
+  box-shadow: 0 0 0 3px rgba(248, 178, 75, 0.28);
+}
+.location__address {
+  font-family: var(--font-serif);
+  font-size: clamp(1.15rem, 1.5vw, 1.4rem);
+  line-height: 1.55;
+  font-variation-settings: 'opsz' 24, 'SOFT' 50, 'wght' 500;
+  color: var(--ink);
+  margin: 2rem 0;
+}
+.location__address .accent {
+  color: var(--accent-2);
+  font-style: italic;
+  font-variation-settings: 'opsz' 48, 'SOFT' 100, 'wght' 400;
+  display: block;
+  margin-top: 0.35em;
+  font-size: 1.35em;
+  line-height: 1.15;
+}
+.location__hours {
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.location__hours-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.location__image {
+  aspect-ratio: 4/5;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.location__image img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ══════════════ Contact ══════════════ */
+.contact {
+  padding: clamp(4rem, 10vh, 8rem) var(--edge);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+.contact__card {
+  background: var(--paper);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid var(--line);
+  transition: all 0.4s var(--ease-out);
+  position: relative;
+  overflow: hidden;
+  min-height: 240px;
+}
+.contact__card::after {
+  content: '→';
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-family: var(--font-serif);
+  font-size: 24px;
+  color: var(--accent-2);
+  opacity: 0.4;
+  transition: transform 0.4s var(--ease-out), opacity 0.4s var(--ease-out);
+}
+.contact__card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  background: linear-gradient(180deg, #FCFAF3, var(--paper));
+  box-shadow: var(--shadow-md);
+}
+.contact__card:hover::after {
+  transform: translateX(4px);
+  opacity: 1;
+}
+.contact__label {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+}
+.contact__value {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 1.9vw, 1.9rem);
+  font-variation-settings: 'opsz' 48, 'SOFT' 50, 'wght' 500;
+  line-height: 1.15;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  word-break: break-word;
+}
+.contact__hint {
+  font-size: 14px;
+  color: var(--ink-mute);
+  margin-top: auto;
+  line-height: 1.4;
+}
+
+/* ══════════════ CTA banner ══════════════ */
+.cta-banner {
+  background: var(--accent-2);
+  color: var(--paper);
+  border-radius: var(--radius-xl);
+  padding: clamp(3rem, 6vh, 5rem) clamp(2rem, 5vw, 5rem);
+  margin: 0 var(--edge) clamp(4rem, 8vh, 6rem);
+  max-width: calc(1440px - var(--edge) * 2);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 60%;
+  height: 200%;
+  background: radial-gradient(ellipse at center, rgba(255, 224, 102, 0.32), transparent 60%);
+  pointer-events: none;
+}
+.cta-banner__text { position: relative; z-index: 1; }
+.cta-banner__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+  line-height: 1.1;
+  font-variation-settings: 'opsz' 144, 'SOFT' 60, 'wght' 500;
+  letter-spacing: -0.015em;
+  color: var(--paper);
+  margin-bottom: 0.75rem;
+}
+.cta-banner__title .ital {
+  font-style: italic;
+  color: var(--accent-soft);
+  font-variation-settings: 'opsz' 144, 'SOFT' 100, 'wght' 400;
+}
+.cta-banner__body {
+  font-family: var(--font-serif);
+  font-variation-settings: 'opsz' 24, 'SOFT' 60, 'wght' 400;
+  font-size: 17px;
+  color: rgba(251, 247, 238, 0.86);
+  line-height: 1.5;
+  max-width: 46ch;
+}
+.cta-banner__ctas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+.cta-banner .btn--primary {
+  background: var(--paper);
+  color: var(--accent-2);
+}
+.cta-banner .btn--primary:hover {
+  background: #FFF;
+  color: var(--ink);
+}
+.cta-banner .btn--secondary {
+  color: var(--paper);
+  border-color: rgba(251, 247, 238, 0.5);
+}
+.cta-banner .btn--secondary:hover {
+  border-color: var(--paper);
+  color: var(--paper);
+  background: rgba(251, 247, 238, 0.08);
+}
+
+/* ══════════════ Footer ══════════════ */
+.footer {
+  background: var(--ink);
+  color: rgba(251, 247, 238, 0.75);
+  padding: clamp(3rem, 6vh, 5rem) var(--edge) 2.5rem;
+}
+.footer__wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(251, 247, 238, 0.14);
+}
+.footer__col-title {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+  margin-bottom: 1.25rem;
+  display: block;
+}
+.footer__brand {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-variation-settings: 'opsz' 48, 'SOFT' 60, 'wght' 500;
+  color: var(--paper);
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+.footer__brand .accent {
+  color: var(--accent-soft);
+  font-style: italic;
+  font-variation-settings: 'opsz' 48, 'SOFT' 100, 'wght' 400;
+}
+.footer__desc {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: rgba(251, 247, 238, 0.65);
+  max-width: 36ch;
+}
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.footer__link {
+  color: rgba(251, 247, 238, 0.75);
+  font-size: 14.5px;
+  transition: color 0.3s var(--ease-out);
+}
+.footer__link:hover { color: var(--accent-soft); }
+.footer__bottom {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: rgba(251, 247, 238, 0.55);
+}
+.footer__legal {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* ══════════════ Reveal ══════════════ */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
+}
+[data-reveal].is-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+[data-reveal-delay="1"] { transition-delay: 0.1s; }
+[data-reveal-delay="2"] { transition-delay: 0.2s; }
+[data-reveal-delay="3"] { transition-delay: 0.3s; }
+[data-reveal-delay="4"] { transition-delay: 0.4s; }
+
+/* ══════════════ Responsive ══════════════ */
+@media (max-width: 1024px) {
+  .hero__grid { grid-template-columns: 1fr; gap: 3rem; }
+  .hero__image { aspect-ratio: 4/4; max-height: 60vh; }
+  .welcome__grid { grid-template-columns: 1fr; }
+  .highlights__grid { grid-template-columns: repeat(2, 1fr); }
+  .services__grid { grid-template-columns: repeat(2, 1fr); }
+  .team__grid, .location__wrap { grid-template-columns: 1fr; }
+  .team__image, .location__image { max-height: 60vh; aspect-ratio: 4/3; }
+  .contact__grid { grid-template-columns: 1fr; }
+  .cta-banner { grid-template-columns: 1fr; }
+  .footer__wrap { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 720px) {
+  .nav__inner { grid-template-columns: auto auto; gap: 1rem; }
+  .nav__links { display: none; }
+  .hero__info { grid-template-columns: 1fr; gap: 1rem; }
+  .highlights__grid { grid-template-columns: 1fr; }
+  .services__grid { grid-template-columns: 1fr; }
+  .team__attributes { grid-template-columns: 1fr; }
+  .location__hours { grid-template-columns: 1fr; }
+  .footer__wrap { grid-template-columns: 1fr; gap: 2rem; }
+  .footer__bottom { flex-direction: column; align-items: flex-start; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ NAVBAR ═══════════ -->
+<header class="nav">
+  <div class="nav__inner">
+    <a href="#hero" class="brand">
+      <span class="brand__name">Physio<span class="accent">therapie</span></span>
+      <span class="brand__place">Saarlouis Mitte · Bibelstraße 2</span>
+    </a>
+    <nav class="nav__links" aria-label="Hauptnavigation">
+      <a href="#ueber" class="nav__link">Über uns</a>
+      <a href="#schwerpunkte" class="nav__link">Schwerpunkte</a>
+      <a href="#angebot" class="nav__link">Therapieangebot</a>
+      <a href="#anfahrt" class="nav__link">Anfahrt</a>
+      <a href="#kontakt" class="nav__link">Kontakt</a>
+    </nav>
+    <a href="tel:+4968314880180" class="nav__cta">
+      Termin: 06831 4880180
+    </a>
+  </div>
+</header>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero" id="hero">
+  <div class="hero__grid">
+    <div class="hero__text">
+      <span class="eyebrow hero__eyebrow" data-reveal>Physiotherapie · Ergotherapie · Saarlouis Mitte</span>
+      <h1 class="hero__heading" data-reveal data-reveal-delay="1">
+        Gesund bleiben —
+        <span class="ital">mit Bewegung, die trägt.</span>
+      </h1>
+      <p class="hero__body" data-reveal data-reveal-delay="2">
+        Willkommen in unserer Praxis mitten in Saarlouis. Wir betreuen Sie mit persönlicher Zuwendung, moderner Technik und langjähriger Erfahrung — von der klassischen Krankengymnastik über manuelle Therapie bis zur individuellen Rehabilitation.
+      </p>
+      <div class="hero__ctas" data-reveal data-reveal-delay="3">
+        <a href="tel:+4968314880180" class="btn btn--primary">
+          Termin vereinbaren
+          <span class="btn__arrow">→</span>
+        </a>
+        <a href="#angebot" class="btn btn--secondary">Therapieangebot ansehen</a>
+      </div>
+      <div class="hero__info" data-reveal data-reveal-delay="4">
+        <div class="info-item">
+          <span class="info-label">Adresse</span>
+          <span class="info-value">Bibelstraße 2<br>66740 Saarlouis</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Öffnungszeiten</span>
+          <span class="info-value">Mo — Fr<br>Termin nach Vereinbarung</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Kontakt</span>
+          <span class="info-value">06831 4880180<br>auch via WhatsApp</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__image" data-reveal data-reveal-delay="2">
+      <span class="hero__image-tag">Ihre Praxis</span>
+      <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=80&auto=format&fit=crop" alt="Physiotherapie in Saarlouis Mitte">
+      <div class="hero__image-badge">
+        <span class="hero__image-badge-num">GmbH</span>
+        <span class="hero__image-badge-txt">Rainer Schiffmann — Physio- und Ergotherapie</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FULL-BLEED IMAGE 1 ═══════════ -->
+<div class="image-bleed" data-reveal>
+  <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=2000&q=80&auto=format&fit=crop" alt="Ruhige Atmosphäre in unserer Praxis">
+  <div class="image-bleed__caption">
+    <h2 class="image-bleed__title">
+      Ihr Weg zurück in <br>Bewegung und Wohlbefinden.
+    </h2>
+    <div class="image-bleed__meta">
+      Physiotherapie<br>Saarlouis Mitte
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ WELCOME ═══════════ -->
+<section class="welcome" id="ueber" data-reveal>
+  <div class="welcome__grid">
+    <div class="section__head">
+      <span class="eyebrow">Willkommen</span>
+      <h2 class="section__title">
+        Ihre Praxis für Physio- und <span class="ital">Ergotherapie.</span>
+      </h2>
+    </div>
+    <div class="welcome__body">
+      <p>Auf den folgenden Seiten möchten wir Sie über die Leistungsvielfalt unserer Praxis informieren und Ihnen die Gelegenheit geben, sich in aller Ruhe umzusehen. Wir wünschen Ihnen einen schönen Rundgang — und freuen uns, Sie bald bei uns persönlich begrüßen zu dürfen.</p>
+      <p>Nutzen Sie unsere Leistungen nicht nur als therapeutisches Heilmittel, sondern auch im Rahmen der Prävention: zur Erhaltung Ihres Wohlbefindens und zur Steigerung Ihrer Leistungsfähigkeit. Wir freuen uns darauf, Sie umfassend betreuen zu dürfen.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ HIGHLIGHTS / SCHWERPUNKTE ═══════════ -->
+<section class="section highlights" id="schwerpunkte">
+  <div class="section__head" data-reveal>
+    <span class="eyebrow">Unsere Schwerpunkte</span>
+    <h2 class="section__title">
+      Spezialisiert. <span class="ital">Persönlich. Erfahren.</span>
+    </h2>
+    <p class="lede">
+      Unser Team behandelt Sie individuell — mit langjähriger Berufserfahrung, interdisziplinärer Zusammenarbeit und modernen Techniken.
+    </p>
+  </div>
+  <div class="highlights__grid">
+    <article class="highlight" data-reveal data-reveal-delay="1">
+      <span class="highlight__num">01</span>
+      <h3 class="highlight__title">Wirbelsäule</h3>
+      <p class="highlight__body">Beschwerden an Lenden-, Hals- und Brustwirbelsäule — durch spezielle Ausbildung und interdisziplinäre Zusammenarbeit besonders effektiv behandelt.</p>
+    </article>
+    <article class="highlight" data-reveal data-reveal-delay="2">
+      <span class="highlight__num">02</span>
+      <h3 class="highlight__title">Schulter</h3>
+      <p class="highlight__body">Konservative und postoperative Therapie sämtlicher Schulterbeschwerden — ein zentraler Schwerpunkt unserer Praxis.</p>
+    </article>
+    <article class="highlight" data-reveal data-reveal-delay="3">
+      <span class="highlight__num">03</span>
+      <h3 class="highlight__title">Orthopädie & Chirurgie</h3>
+      <p class="highlight__body">Viele Therapie- und Behandlungsmöglichkeiten aus langjähriger Erfahrung, auch mit speziellen Trainingsgeräten.</p>
+    </article>
+    <article class="highlight" data-reveal data-reveal-delay="4">
+      <span class="highlight__num">04</span>
+      <h3 class="highlight__title">Sportverletzungen</h3>
+      <p class="highlight__body">Bei allen Sportverletzungen, insbesondere bei Knie- und Leistenproblemen, sind wir Ihr erster Ansprechpartner.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ═══════════ FULL-BLEED IMAGE 2 ═══════════ -->
+<div class="image-bleed" data-reveal>
+  <img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=2000&q=80&auto=format&fit=crop" alt="Behandlung in unserer Praxis">
+  <div class="image-bleed__caption">
+    <h2 class="image-bleed__title">
+      Moderne Techniken. Sanfte Hände.<br>Persönliche Betreuung.
+    </h2>
+    <div class="image-bleed__meta">
+      Nº 02<br>Behandlung
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ SERVICES / THERAPIEANGEBOT ═══════════ -->
+<section class="services" id="angebot">
+  <div class="services__wrap">
+    <div class="section__head" data-reveal>
+      <span class="eyebrow">Nº 03 · Therapieangebot</span>
+      <h2 class="section__title">
+        Maßgeschneiderte Behandlungen — für <span class="ital">Prophylaxe, Therapie und Rehabilitation.</span>
+      </h2>
+      <p class="lede">
+        Über die klassische Krankengymnastik hinaus bieten wir Ihnen ein breites Spektrum an Behandlungsmethoden.
+      </p>
+    </div>
+    <div class="services__grid">
+      <div class="service" data-reveal>
+        <span class="service__num">01</span>
+        <h3 class="service__title">Krankengymnastik</h3>
+        <p class="service__body">Die klassische physiotherapeutische Behandlung — Grundlage vieler individueller Therapieverläufe.</p>
+      </div>
+      <div class="service" data-reveal data-reveal-delay="1">
+        <span class="service__num">02</span>
+        <h3 class="service__title">Manuelle Therapie</h3>
+        <p class="service__body">Gezielte Handgriffe zur Behandlung von Bewegungseinschränkungen und Schmerzen im Bewegungsapparat.</p>
+      </div>
+      <div class="service" data-reveal data-reveal-delay="2">
+        <span class="service__num">03</span>
+        <h3 class="service__title">Lymphdrainage</h3>
+        <p class="service__body">Sanfte Griffe zur Entstauung — bei Schwellungen, Lymphödemen und nach Operationen.</p>
+      </div>
+      <div class="service" data-reveal data-reveal-delay="3">
+        <span class="service__num">04</span>
+        <h3 class="service__title">PNF · Neurologisch</h3>
+        <p class="service__body">Propriozeptive Neuromuskuläre Fazilitation — spezialisierte Behandlung bei komplexen Bewegungsstörungen.</p>
+      </div>
+      <div class="service" data-reveal>
+        <span class="service__num">05</span>
+        <h3 class="service__title">Massage & Wellness</h3>
+        <p class="service__body">Klassische Massage und Wellness-Anwendungen zur Entspannung — auf Privatbasis.</p>
+      </div>
+      <div class="service" data-reveal data-reveal-delay="1">
+        <span class="service__num">06</span>
+        <h3 class="service__title">Physikalische Therapie</h3>
+        <p class="service__body">Wärme- und Kälteanwendungen, Ultraschall, Elektrotherapie — als ergänzender Baustein.</p>
+      </div>
+      <div class="service" data-reveal data-reveal-delay="2">
+        <span class="service__num">07</span>
+        <h3 class="service__title">Ergotherapie</h3>
+        <p class="service__body">Betreuung durch unser interdisziplinäres Team — im engen Zusammenspiel mit der Physiotherapie.</p>
+      </div>
+      <div class="service" data-reveal data-reveal-delay="3">
+        <span class="service__num">08</span>
+        <h3 class="service__title">Gutscheine & 10er Karten</h3>
+        <p class="service__body">Erhältlich bei uns vor Ort — als Geschenk oder für Sie selbst. Eine schöne Aufmerksamkeit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PREVENTION QUOTE (full-bleed) ═══════════ -->
+<section class="prevention">
+  <div class="prevention__bg">
+    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=2400&q=80&auto=format&fit=crop" alt="Wohlbefinden und Prävention" loading="lazy">
+  </div>
+  <div class="prevention__inner">
+    <span class="eyebrow prevention__eyebrow" data-reveal>Prävention · Wohlbefinden</span>
+    <blockquote class="prevention__quote" data-reveal data-reveal-delay="1">
+      „Nutzen Sie unsere Leistungen nicht nur als Heilmittel — sondern <em>auch zur Prävention</em>, für Ihr Wohlbefinden und Ihre Leistungsfähigkeit."
+    </blockquote>
+    <p class="prevention__sub" data-reveal data-reveal-delay="2">
+      Wir freuen uns darauf, Sie umfassend betreuen zu dürfen.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════ TEAM ═══════════ -->
+<section class="team">
+  <div class="team__grid">
+    <div class="team__text" data-reveal>
+      <span class="eyebrow">Unser Team</span>
+      <h2 class="team__title">
+        Kompetent. Freundlich. <span class="ital">Für Sie da.</span>
+      </h2>
+      <p class="team__body">
+        Unser kompetentes und freundliches Team setzt moderne Techniken gezielt ein, um Sie individuell und bestmöglich zu behandeln. Unter der Leitung von <strong>Rainer Schiffmann</strong> arbeiten wir mit persönlicher Zuwendung und langjähriger Erfahrung an einem gemeinsamen Ziel: Ihre Gesundheit.
+      </p>
+      <div class="team__attributes">
+        <div class="team__attr">
+          <div class="team__attr-value">10+</div>
+          <div class="team__attr-label">Jahre Berufserfahrung im Team</div>
+        </div>
+        <div class="team__attr">
+          <div class="team__attr-value">8</div>
+          <div class="team__attr-label">Behandlungsformen unter einem Dach</div>
+        </div>
+      </div>
+      <a href="#kontakt" class="btn btn--primary" style="margin-top: 1rem; align-self: flex-start;">
+        Kontakt aufnehmen
+        <span class="btn__arrow">→</span>
+      </a>
+    </div>
+    <div class="team__image" data-reveal data-reveal-delay="1">
+      <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=1200&q=80&auto=format&fit=crop" alt="Unser Team in Saarlouis Mitte">
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ LOCATION ═══════════ -->
+<section class="location" id="anfahrt">
+  <div class="location__wrap">
+    <div>
+      <span class="eyebrow" data-reveal>Ihr Weg zu uns</span>
+      <div class="location__notice" data-reveal data-reveal-delay="1">
+        Wir sind umgezogen — seit dem 02. September 2024
+      </div>
+      <h2 class="section__title" data-reveal data-reveal-delay="1">
+        Bibelstraße 2 — <span class="ital">mitten in Saarlouis.</span>
+      </h2>
+      <p class="location__address" data-reveal data-reveal-delay="2">
+        Physiotherapie Saarlouis Mitte GmbH<br>
+        <span style="color: var(--ink-mute); font-size: 0.85em;">Physiotherapie · Ergotherapie · Rainer Schiffmann</span>
+        <span class="accent">Bibelstraße 2<br>66740 Saarlouis</span>
+      </p>
+      <div class="location__hours" data-reveal data-reveal-delay="3">
+        <div class="location__hours-block">
+          <span class="info-label">Öffnungszeiten</span>
+          <span class="info-value">Montag — Freitag</span>
+          <span style="color: var(--ink-mute); font-size: 13.5px; margin-top: 0.35rem;">Termine nach Vereinbarung</span>
+        </div>
+        <div class="location__hours-block">
+          <span class="info-label">Terminvergabe</span>
+          <span class="info-value">Telefonisch<br>oder per WhatsApp</span>
+        </div>
+      </div>
+    </div>
+    <div class="location__image" data-reveal data-reveal-delay="1">
+      <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=1200&q=80&auto=format&fit=crop" alt="Unsere Praxis in der Bibelstraße 2">
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CONTACT ═══════════ -->
+<section class="contact" id="kontakt">
+  <div class="section__head" data-reveal>
+    <span class="eyebrow">Kontakt · Termin</span>
+    <h2 class="section__title">
+      Wir sind für Sie da — <span class="ital">rufen Sie uns einfach an.</span>
+    </h2>
+    <p class="lede">
+      Für alle Fragen und die Terminvergabe erreichen Sie uns telefonisch, per WhatsApp oder E-Mail. Gerne können Sie eine Nachricht auf unserem Anrufbeantworter hinterlassen — wir rufen Sie schnellstmöglich zurück.
+    </p>
+  </div>
+  <div class="contact__grid">
+    <a href="tel:+4968314880180" class="contact__card" data-reveal>
+      <span class="contact__label">Telefon</span>
+      <span class="contact__value">06831 4880180</span>
+      <span class="contact__hint">Für Fragen und Terminvergabe. Nachricht auf dem AB — wir rufen zurück.</span>
+    </a>
+    <a href="https://wa.me/4968314880180" class="contact__card" data-reveal data-reveal-delay="1">
+      <span class="contact__label">WhatsApp</span>
+      <span class="contact__value">06831 4880180</span>
+      <span class="contact__hint">Schnell und unkompliziert erreichbar.</span>
+    </a>
+    <a href="mailto:info@physiotherapie-saarlouis-mitte.de" class="contact__card" data-reveal data-reveal-delay="2">
+      <span class="contact__label">E-Mail</span>
+      <span class="contact__value" style="font-size: clamp(1rem, 1.4vw, 1.35rem);">info@physiotherapie-<br>saarlouis-mitte.de</span>
+      <span class="contact__hint">Antwort innerhalb eines Werktags.</span>
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════ CTA BANNER ═══════════ -->
+<section class="cta-banner" data-reveal>
+  <div class="cta-banner__text">
+    <h2 class="cta-banner__title">
+      Behandlung gewünscht?<br>
+      <span class="ital">Wir freuen uns auf Sie.</span>
+    </h2>
+    <p class="cta-banner__body">
+      Kommen Sie gesund durch den Tag — mit persönlicher Physio- und Ergotherapie in der Bibelstraße 2, Saarlouis.
+    </p>
+  </div>
+  <div class="cta-banner__ctas">
+    <a href="tel:+4968314880180" class="btn btn--primary">
+      Jetzt anrufen
+      <span class="btn__arrow">→</span>
+    </a>
+    <a href="mailto:info@physiotherapie-saarlouis-mitte.de" class="btn btn--secondary">E-Mail schreiben</a>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer">
+  <div class="footer__wrap">
+    <div>
+      <div class="footer__brand">Physio<span class="accent">therapie</span><br>Saarlouis Mitte</div>
+      <p class="footer__desc">
+        Physio- und Ergotherapie in Saarlouis. Persönliche Betreuung, moderne Techniken und langjährige Erfahrung.
+      </p>
+    </div>
+    <div>
+      <span class="footer__col-title">Praxis</span>
+      <div class="footer__links">
+        <a href="#ueber" class="footer__link">Über uns</a>
+        <a href="#schwerpunkte" class="footer__link">Schwerpunkte</a>
+        <a href="#angebot" class="footer__link">Therapieangebot</a>
+        <a href="#anfahrt" class="footer__link">Anfahrt</a>
+      </div>
+    </div>
+    <div>
+      <span class="footer__col-title">Kontakt</span>
+      <div class="footer__links">
+        <a href="tel:+4968314880180" class="footer__link">06831 4880180</a>
+        <a href="https://wa.me/4968314880180" class="footer__link">WhatsApp</a>
+        <a href="mailto:info@physiotherapie-saarlouis-mitte.de" class="footer__link">E-Mail</a>
+      </div>
+    </div>
+    <div>
+      <span class="footer__col-title">Adresse</span>
+      <div class="footer__links">
+        <span class="footer__link">Bibelstraße 2</span>
+        <span class="footer__link">66740 Saarlouis</span>
+        <span class="footer__link" style="color: var(--accent-soft); margin-top: 0.4rem;">Mo — Fr geöffnet</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2026 Physiotherapie Saarlouis Mitte GmbH · Rainer Schiffmann</span>
+    <div class="footer__legal">
+      <a href="#" class="footer__link">Impressum</a>
+      <a href="#" class="footer__link">Datenschutz</a>
+      <a href="#" class="footer__link">Sitemap</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+})();
+</script>
+</body>
+</html>
